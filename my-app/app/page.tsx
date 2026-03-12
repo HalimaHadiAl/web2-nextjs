@@ -6,9 +6,9 @@ export default function Home() {
       style={{
         minHeight: "100vh",
         fontFamily: "system-ui, sans-serif",
-        background: "linear-gradient(180deg,#f8fafc,#e2e8f0)",
         display: "flex",
         flexDirection: "column",
+        background: "#f8fafc",
       }}
     >
       {/* NAVBAR */}
@@ -18,24 +18,43 @@ export default function Home() {
           justifyContent: "space-between",
           padding: "20px 60px",
           alignItems: "center",
+          borderBottom: "1px solid #e2e8f0",
+          background: "white",
         }}
       >
         <h3 style={{ fontWeight: "700" }}>Web Programming II</h3>
 
-        <Link href="/profile">
-          <button
-            style={{
-              padding: "8px 16px",
-              borderRadius: "6px",
-              border: "none",
-              background: "#2563eb",
-              color: "white",
-              cursor: "pointer",
-            }}
-          >
-            Profile
-          </button>
-        </Link>
+        <div style={{ display: "flex", gap: "10px" }}>
+          <Link href="/about">
+            <button
+              style={{
+                padding: "8px 16px",
+                borderRadius: "6px",
+                border: "1px solid #2563eb",
+                background: "white",
+                color: "#2563eb",
+                cursor: "pointer",
+              }}
+            >
+              About
+            </button>
+          </Link>
+
+          <Link href="/profile">
+            <button
+              style={{
+                padding: "8px 16px",
+                borderRadius: "6px",
+                border: "none",
+                background: "#2563eb",
+                color: "white",
+                cursor: "pointer",
+              }}
+            >
+              Profile
+            </button>
+          </Link>
+        </div>
       </nav>
 
       {/* HERO */}
@@ -43,25 +62,21 @@ export default function Home() {
         style={{
           flex: 1,
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
-          flexDirection: "column",
+          alignItems: "center",
           textAlign: "center",
+          flexDirection: "column",
           padding: "40px",
         }}
       >
         <h1
           style={{
-            fontSize: "56px",
+            fontSize: "44px",
             fontWeight: "800",
             marginBottom: "20px",
-            background:
-              "linear-gradient(90deg,#2563eb,#06b6d4)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
           }}
         >
-          Hello Next.js 🚀
+          Hello Next.js 👋
         </h1>
 
         <p
@@ -72,9 +87,10 @@ export default function Home() {
             lineHeight: "1.6",
           }}
         >
-          Ini adalah project pertama saya pada mata kuliah
-          <b> Pemrograman Web II</b>. Website ini dibuat menggunakan
-          framework modern <b>Next.js</b>.
+          Halo! Website ini merupakan project pertama saya pada mata kuliah
+          <b> Pemrograman Web II</b>.  
+          Project ini dibuat untuk mempelajari dasar pengembangan aplikasi web
+          menggunakan framework modern yaitu <b>Next.js</b>.
         </p>
 
         <div style={{ marginTop: "30px", display: "flex", gap: "15px" }}>
@@ -90,56 +106,25 @@ export default function Home() {
                 cursor: "pointer",
               }}
             >
-              Lihat Profile
+              Lihat Profil
             </button>
           </Link>
 
-          <button
-            style={{
-              padding: "12px 24px",
-              borderRadius: "8px",
-              border: "1px solid #cbd5e1",
-              background: "white",
-              fontWeight: "600",
-              cursor: "pointer",
-            }}
-          >
-            Learn Next.js
-          </button>
+          <Link href="/about">
+            <button
+              style={{
+                padding: "12px 24px",
+                borderRadius: "8px",
+                border: "1px solid #cbd5e1",
+                background: "white",
+                fontWeight: "600",
+                cursor: "pointer",
+              }}
+            >
+              Tentang Project
+            </button>
+          </Link>
         </div>
-      </section>
-
-      {/* CARD SECTION */}
-      <section
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "30px",
-          paddingBottom: "60px",
-          flexWrap: "wrap",
-        }}
-      >
-        {[
-          { title: "Next.js", text: "Framework React modern untuk web." },
-          { title: "React", text: "Library JavaScript untuk UI interaktif." },
-          { title: "Project", text: "Tugas Web Programming II." },
-        ].map((item) => (
-          <div
-            key={item.title}
-            style={{
-              width: "220px",
-              padding: "20px",
-              borderRadius: "12px",
-              background: "white",
-              boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
-            }}
-          >
-            <h3 style={{ marginBottom: "10px" }}>{item.title}</h3>
-            <p style={{ color: "#64748b", fontSize: "14px" }}>
-              {item.text}
-            </p>
-          </div>
-        ))}
       </section>
 
       {/* FOOTER */}
@@ -151,7 +136,7 @@ export default function Home() {
           color: "#64748b",
         }}
       >
-        Built with Next.js • Web Programming II
+        © 2026 - Project Pemrograman Web II
       </footer>
     </main>
   );
